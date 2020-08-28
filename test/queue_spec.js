@@ -86,6 +86,7 @@ describe('Queue', () => {
         queue.enqueue('A');
         queue.enqueue('B');
         expect(queue.front.value).to.equal('A');
+
         expect(queue.back.value).to.equal('B');
         queue.enqueue('C');
         expect(queue.front.value).to.equal('A');
@@ -163,7 +164,12 @@ describe('Queue', () => {
       it('Should return the value of the node removed from the queue', () => {
         queue.enqueue('A');
         queue.enqueue('B');
+        // console.log('dequeue: ', queue.dequeue());
         expect(queue.dequeue()).to.equal('A');
+        
+        
+        // console.log('front: ', queue.front);
+        // console.log('dequeue: ', queue.dequeue());
         expect(queue.dequeue()).to.equal('B');
       });
     });
